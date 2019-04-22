@@ -1,0 +1,29 @@
+<template>
+  <div class="dashboard">
+    <h1 class="subheading grey--text">Your Cart Item</h1>
+    <v-container class="my-5">
+      <v-card flat v-for="detail in usercart" :key="detail.name">
+        <v-layout row wrap>
+          <v-flex xs6 sm4>
+            <div class="caption grey--text">Prroduct Name</div>
+            <div>{{ detail.productId.name }}</div>
+          </v-flex>
+          <v-flex xs6 sm4>
+            <div class="caption grey--text">Price</div>
+            <div>{{ detail.productId.price }}</div>
+          </v-flex>
+          <v-flex xs6 sm4>
+            <div class="caption grey--text">Quantity</div>
+            <div>{{ detail.amount }}</div>
+          </v-flex>
+          <v-flex xs6 sm4>
+            <div>
+            <v-btn>Add</v-btn>
+            <v-btn>Remove</v-btn>
+            </div>
+          </v-flex>
+        </v-layout>
+      </v-card>
+    </v-container>
+  </div>
+</template>
