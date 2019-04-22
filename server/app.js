@@ -7,7 +7,7 @@ const cors = require('cors')
 const port = 3000
 
 const mongoose = require('mongoose')
-mongoose.connect(`mongodb://localhost/e-commerce-${process.env.NODE_ENV}`, { useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB, { useNewUrlParser: true})
 
 app.use(cors())
 app.use(express.json())
